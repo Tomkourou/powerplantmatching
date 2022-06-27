@@ -6,9 +6,8 @@ Created on Wed Nov 25 08:48:04 2020
 @author: fabian
 """
 
-import pytest
-
 import powerplantmatching as pm
+import pytest
 from powerplantmatching import data
 
 config = pm.get_config()
@@ -51,6 +50,11 @@ def test_OPSD_VRE():
     assert not df.empty
     assert df.Capacity.sum() > 0
 
+
+def test_GEM_GGPT():
+    df = pm.data.GEM_GGPT("VN")
+    assert not df.empty
+    assert df.Capacity.sum() > 0 
 
 # Enable after release of v0.5.0
 # def test_powerplants():

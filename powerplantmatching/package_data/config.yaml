@@ -15,6 +15,7 @@ main_query: "Name != '' and (DateOut >= 2020 or DateOut != DateOut)"
 matching_sources:
   # Make individual queries for the datasets as done in `fully_included_sources`
   # Queries are combined with `main_query` with an `and` operator
+  - GEM_GGPT
   - ENTSOE
   - GEO
   - GPD
